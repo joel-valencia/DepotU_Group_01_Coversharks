@@ -4,3 +4,111 @@
 @import '../src/viewcontrols/home/home.vc.less';
 @import '../src/viewcontrols/howtoplay/howtoplay.vc.less';
 @import '../src/viewcontrols/promotions/promotions.vc.less';
+
+@font-face {
+	font-family: 'Roboto BoldCondensed';
+	src: url("/fonts/Roboto-BoldCondensed.otf") format("opentype"),
+	     url("/fonts/Roboto-BoldCondensed.woff") format("woff"),
+	     url("/fonts/Roboto-BoldCondensed.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Roboto Condensed';
+	src: url("/fonts/Roboto-Condensed.otf") format("opentype"),
+	     url("/fonts/Roboto-Condensed.woff") format("woff"),
+	     url("/fonts/Roboto-Condensed.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Work Sans Regular';
+	src: url("/fonts/WorkSans-Regular.otf") format("opentype"),
+	     url("/fonts/WorkSans-Regular.woff") format("woff"),
+	     url("/fonts/WorkSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Work Sans ExtraBold';
+	src: url("/fonts/WorkSans-ExtraBold.otf") format("opentype"),
+	     url("/fonts/WorkSans-ExtraBold.woff") format("woff"),
+	     url("/fonts/WorkSans-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Work Sans ExtraLight';
+	src: url("/fonts/WorkSans-ExtraLight.otf") format("opentype"),
+	     url("/fonts/WorkSans-ExtraLight.woff") format("woff"),
+	     url("/fonts/WorkSans-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Work Sans SemiBold';
+	src: url("/fonts/WorkSans-SemiBold.otf") format("opentype"),
+	     url("/fonts/WorkSans-SemiBold.woff") format("woff"),
+	     url("/fonts/WorkSans-SemiBold.ttf") format("truetype");
+}
+
+body {
+    font-family: "Work Sans Regular";
+}
+
+@nav-height: 5.8em;
+
+#nav {
+    height: @nav-height;
+    padding-left: 2em;
+    
+    #logo {
+        display: block;
+        line-height: @nav-height;
+        background-color: #fff;
+        float: left;
+        
+        img {
+            height: 2.6em;
+            vertical-align: middle;
+        }
+    }
+    
+    ul {
+        float: right;
+        padding: 0;
+        padding-right: 1em;
+        margin: 0;
+
+        li {
+            list-style-image: none;
+            display: inline-block;
+            height: @nav-height;
+            padding-left: 1.9em;
+            padding-right: 1.9em;
+            line-height: @nav-height;
+            
+            a {
+                vertical-align: middle;
+                text-transform: uppercase;
+                color: #bbb;
+                font-family: "Work Sans SemiBold";
+                font-size: 1.2em;
+            }
+        }
+    }
+    
+    #social {
+        display: block;
+        line-height: @nav-height;
+        background-color: #eee;
+        float: right;
+        width: 10em;
+        text-align: center;
+        
+        a {
+            margin: 1em;
+            
+            img {
+                height: 1.5em;
+                max-width: 1.5em;
+                vertical-align: middle;
+            } 
+        }
+    }
+}
