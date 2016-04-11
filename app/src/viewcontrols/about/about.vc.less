@@ -4,42 +4,115 @@
     #platui > #variables;
 
     [plat-control="about-vc"] {
+   
+       
       #div-1 {
          background-image: url('../../images/about-hero.jpg');
          background-position-y: -5.5em;
-         height: 18em;  
+          
         
             p {
                 color: white;
-                text-align: center;
                 font-family: 'Work Sans ExtraLight';
                 font-size: 3em;
                 line-height: 3.7em;
                 letter-spacing: 0.15em;
+                text-align: center;
             }
       }
       
       #div-2 {
           
           img {
-            padding-top: 4.5em; 
+            padding-top: 4.5em;
+            width: 33%; 
+            padding-right: 0.8em;
             
           }
           
-          #h2-1 {
-             font-family: 'Work Sans SemiBold';
-            //  font-size: 2em;
-             padding-top: 2em;
-             padding-left: 1em;
+          #text-div {  
+            
+            #h2-1 {
+                font-family: 'Work Sans ExtraBold';
+                padding-top: 18%;
+                margin-bottom: -0.5em;
+                
+            }
+            
+            #h3-1 { 
+                font-family: 'Work Sans ExtraBold';
+                color: darkgray;
+                margin-bottom: 0.5em;
+                padding-bottom: 0.5em;
+                border-bottom: 1px solid black;
+            }
+            #p-1 {
+                font-family: 'Work Sans Regular';
+            }
           }
-          
-          #p-2 {
-            padding-left: 1em; 
-            font-family: 'Work Sans SemiBold';
- 
-          }
-          
       }
        
+    }
+}
+
+@media (max-width: 80em) {
+    #h2-1 {
+        font-size: 200%;
+    }
+    #h3-1 {
+        font-size: 150%;
+    }
+    #p-1 {
+        font-size: 115%;
+    }
+}
+
+@media (max-width: 72em) {
+    #h2-1 {
+        font-size: 180%;
+    }
+    #h3-1 {
+        font-size: 130%;
+    }
+    #p-1 {
+        font-size: 105%;
+    }
+}
+
+@media (max-width: 65em) {
+    #h2-1 {
+        font-size: 150%;
+        margin-top: 0.5em;
+    }
+    #h3-1 {
+        font-size: 100%;
+    }
+    #p-1 {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 55em) {
+    #h2-1 {
+        font-size: 150%;
+        margin-top: 0.8em;
+    }
+    #h3-1 {
+        font-size: 100%;
+    }
+    #p-1 {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 50em) {
+    #h2-1 {
+        font-size: 125%;
+    }
+    #h3-1 {
+        font-size: 100%;
+    }
+    #p-1 {
+        font-size: 75%;
     }
 }
