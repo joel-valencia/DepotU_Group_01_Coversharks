@@ -3,6 +3,23 @@ import 'platypusui';
 
 import './app/app';
 
+// open mobile menu
+document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('mobile-menu').style.display = "block";
+    document.getElementById('nav').setAttribute("class", "blur");
+    document.getElementById('vp').setAttribute("class", "blur");
+    document.getElementById('footer').setAttribute("class", "blur");
+});
+
+// close mobile menu
+document.getElementById('close').addEventListener('click', function() {
+    document.getElementById('mobile-menu').style.display = "none";
+    // this is potentially dangerous if there are other classes on these elements
+    document.getElementById('nav').removeAttribute("class");
+    document.getElementById('vp').removeAttribute("class");
+    document.getElementById('footer').removeAttribute("class");
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     var nav = document.getElementById('nav');
     var logo = document.getElementById('logo');
@@ -30,8 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     window.addEventListener('resize', function() {
-        console.log("resized");
-        
         if (document.documentElement.clientWidth <= 960) {
             // mobile reset
             
