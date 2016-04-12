@@ -1,10 +1,6 @@
 import 'platypus';
 import 'platypusui';
-
 import './app/app';
-
-<<<<<<< HEAD
-=======
 // open mobile menu
 document.getElementById('hamburger').addEventListener('click', function() {
     document.getElementById('mobile-menu').style.display = "block";
@@ -12,7 +8,6 @@ document.getElementById('hamburger').addEventListener('click', function() {
     document.getElementById('vp').setAttribute("class", "blur");
     document.getElementById('footer').setAttribute("class", "blur");
 });
-
 // close mobile menu
 document.getElementById('close').addEventListener('click', function() {
     document.getElementById('mobile-menu').style.display = "none";
@@ -21,8 +16,6 @@ document.getElementById('close').addEventListener('click', function() {
     document.getElementById('vp').removeAttribute("class");
     document.getElementById('footer').removeAttribute("class");
 });
-
->>>>>>> 663787519f6708aeb436000c1044294db58ab8ae
 document.addEventListener('DOMContentLoaded', function() {
     var nav = document.getElementById('nav');
     var logo = document.getElementById('logo');
@@ -50,11 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     window.addEventListener('resize', function() {
-<<<<<<< HEAD
-        console.log("resized");
-        
-=======
->>>>>>> 663787519f6708aeb436000c1044294db58ab8ae
         if (document.documentElement.clientWidth <= 960) {
             // mobile reset
             
@@ -78,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             logo.style.backgroundImage = "url('/images/logo-color.svg')";
             nav.style.backgroundColor = "white";
-
         }
     });
 });
