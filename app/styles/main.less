@@ -55,22 +55,69 @@ body {
     font-family: "Work Sans Regular";
 }
 
-@nav-height: 5.8em;
+.blur {
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}
+
+#mobile-menu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1e3b;
+    z-index: 200;
+    opacity: 0.8;
+    
+    color: white;
+    font-size: 20px;
+    font-family: "Work Sans ExtraBold";
+    
+    #close {
+        display: block;
+        width: 2em;
+        height: 2em;
+        font-size: 2.7em;
+        font-family: sans-serif;
+        text-align: center;
+        float: right;
+        padding-top: 0.35em;
+    }
+    
+    #close:after {
+        content: '\d7';
+    }
+}
+
+@nav-height: 5.65em;
+@nav-mobile-height: 4.5em;
+@nav-font-size: 1.2em;
+@footer-text-color: #384d68;
+@hamburger-line-length: 2.2em;
 
 #nav {
     height: @nav-height;
     padding-left: 2em;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+    width: 100%;
+    line-height: @nav-height;
     
     #logo {
-        display: block;
+        display: inline-block;
         line-height: @nav-height;
-        background-color: #fff;
-        float: left;
-        
-        img {
-            height: 2.6em;
-            vertical-align: middle;
-        }
+        // float: left;
+        width: 11.5em;
+        height: 2.6em;
+        background-image: url('/images/logo-color.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+    }
+    
+    #hamburger {
+        display: none;
     }
     
     ul {
@@ -92,7 +139,7 @@ body {
                 text-transform: uppercase;
                 color: #bbb;
                 font-family: "Work Sans SemiBold";
-                font-size: 1.2em;
+                font-size: @nav-font-size;
             }
         }
     }
@@ -116,3 +163,206 @@ body {
         }
     }
 }
+
+#footer {
+    color: @footer-text-color;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Work Sans SemiBold";
+    font-size: @nav-font-size;
+    display: block;
+    clear: both;
+    
+    #top {
+        background-color: #1c202b;
+        min-height: 10.3em;
+        line-height: 10.3em;
+        vertical-align: middle;
+        
+        #left {
+            height: 10.3em;
+            position: relative;
+            
+            #logos {
+                line-height: 1em;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                
+                #logo {
+                    height: 4.2em;
+                    margin-bottom: 0.6em;
+                }
+                
+                .social {
+                    max-height: 1.6em;
+                    max-width: 1.6em;
+                    margin: 0em 0.4em;
+                }
+            }
+        }
+        
+        #center {
+            line-height: 1em;
+            position: relative;
+            height: 10.3em;
+            text-align: right;
+            
+            #page-links {
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                transform: translate(-20em, -50%);
+                width: 20em;
+                
+                a {
+                    color: @footer-text-color;
+                    display: block;
+                    min-width: 7em;
+                    text-align: left;
+                    padding: 0.7em 0em;
+                }
+                
+                .page-links-left {
+                    float: right;
+                    border-right: 0.15em solid @footer-text-color;
+                    
+                    a {
+                        padding-right: 2em;
+                    }
+                }
+                
+                .page-links-right {
+                    float: right;
+                    
+                    a {
+                        padding-left: 2em;
+                    }
+                }
+            }
+        }
+        
+        #right {
+            // height: 10.2em;
+            
+            .nav-button {
+
+            }
+        }
+    }
+    
+    #bottom {
+        background-color: #111119;
+        padding: 0em;
+        
+        div {
+            padding: 1em 0em;
+        }
+    }
+}
+
+#vp {
+    display: block;
+    clear: both;
+    height: auto;
+}
+
+.nav-button {
+    display: inline-block;
+    width: 11.9em;
+    height: 3.1em;
+    line-height: 3.1em;
+    vertical-align: middle;
+    background-color: #35b995;
+    color: white;
+    font-family: "Roboto Condensed";
+    letter-spacing: 0.15em;
+    border-radius: 0.4em;
+}
+
+@media (max-width: 960px) {
+    #nav {
+        background-color: transparent;
+        height: @nav-mobile-height;
+        line-height: @nav-mobile-height;
+        
+        #logo {
+            background-image: url('/images/coversharks-mark-white.svg');
+            width: 3.5em;
+            line-height: @nav-mobile-height;
+        }
+        
+        ul, #social {
+            display: none;
+        }
+        
+        #hamburger {
+            height: @nav-mobile-height;
+            display: block;
+            float: right;
+            text-align: center;
+            position: relative;
+            width: @hamburger-line-length;
+            margin-right: 1.7em;
+            
+            #bars {
+                width: @hamburger-line-length;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            
+                .bar {
+                    display: block;
+                    background-color: white;
+                    border-top: 0.2em solid white;
+                    width: @hamburger-line-length;
+                    margin: 0.6em 0em;
+                }
+            }
+        }
+    }
+    
+    #footer #top #center #page-links {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    #footer {
+        #top {
+            #left {
+                line-height: 0em;
+                height: 9em;
+            }
+            
+            #right {
+                line-height: 0em;
+            }
+        }
+        
+        #bottom {
+            padding: 0.4em;
+            
+            div {
+                padding: 0.2em;
+            }
+        }
+        
+        .nav-button {
+            height: 2.5em;
+            line-height: 2.5em;
+            width: 13em;
+            font-size: 0.9em;
+            margin-bottom: 1.9em;
+        }
+    }
+    
+    
+    
+    
+
+    
+    
+}
+
