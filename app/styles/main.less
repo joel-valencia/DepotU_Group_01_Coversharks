@@ -65,27 +65,51 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #1c1e3b;
+    background-color: rgba(24,25,53,0.7);
     z-index: 200;
-    opacity: 0.8;
-    
+    text-align: center;
     color: white;
-    font-size: 20px;
     font-family: "Work Sans ExtraBold";
     
     #close {
         display: block;
-        width: 2em;
-        height: 2em;
+        width: 1.7em;
+        height: 1.7em;
         font-size: 2.7em;
         font-family: sans-serif;
         text-align: center;
-        float: right;
-        padding-top: 0.35em;
+        position: absolute;
+        right: 0;
+        padding-top: 0.2em;
     }
     
     #close:after {
         content: '\d7';
+    }
+    
+    .logo {
+        height: 3.8em;
+        margin-top: 3.2em;
+        margin-bottom: 1.7em;
+    }
+    
+    a {
+        color: white;
+        text-transform: uppercase;
+        display: block;
+        font-size: 2.1em;
+        padding: 0.6em 0em;
+    }
+    
+    a.social {
+        display: inline;
+        
+        img {
+            margin-top: 1.1em;
+            margin-left: 0.9em;
+            margin-right: 0.9em;
+            height: 1em;
+        }
     }
 }
 
@@ -173,6 +197,11 @@ body {
     display: block;
     clear: both;
     
+    .nav-button {
+        background-color: #35b995;
+        color: white;
+    }
+    
     #top {
         background-color: #1c202b;
         min-height: 10.3em;
@@ -190,7 +219,7 @@ body {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 
-                #logo {
+                .logo {
                     height: 4.2em;
                     margin-bottom: 0.6em;
                 }
@@ -244,11 +273,16 @@ body {
         }
         
         #right {
-            // height: 10.2em;
+            min-height: 10.3em;
+            position: relative;
             
             .nav-button {
-
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
+
         }
     }
     
@@ -273,12 +307,11 @@ body {
     width: 11.9em;
     height: 3.1em;
     line-height: 3.1em;
-    vertical-align: middle;
-    background-color: #35b995;
-    color: white;
     font-family: "Roboto Condensed";
     letter-spacing: 0.15em;
     border-radius: 0.4em;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 @media (max-width: 960px) {
@@ -333,11 +366,12 @@ body {
         #top {
             #left {
                 line-height: 0em;
-                height: 9em;
+                height: 8em;
             }
             
             #right {
                 line-height: 0em;
+                min-height: 5em;
             }
         }
         
@@ -357,12 +391,23 @@ body {
             margin-bottom: 1.9em;
         }
     }
-    
-    
-    
-    
-
-    
-    
 }
 
+@media (max-height: 500px) {
+    #mobile-menu {
+        .logo {
+            display: none;
+        }
+        a:first-of-type {
+            margin-top: 1.2em;
+        }
+        a {
+            padding: 0.3em 0em;
+            font-size: 1.7em;
+        }
+        a.social {
+            margin-top: 0.8em;
+        }
+    }
+    
+}
