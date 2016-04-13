@@ -197,6 +197,11 @@ body {
     display: block;
     clear: both;
     
+    .nav-button {
+        background-color: #35b995;
+        color: white;
+    }
+    
     #top {
         background-color: #1c202b;
         min-height: 10.3em;
@@ -268,11 +273,16 @@ body {
         }
         
         #right {
-            // height: 10.2em;
+            min-height: 10.3em;
+            position: relative;
             
             .nav-button {
-
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
+
         }
     }
     
@@ -297,12 +307,11 @@ body {
     width: 11.9em;
     height: 3.1em;
     line-height: 3.1em;
-    vertical-align: middle;
-    background-color: #35b995;
-    color: white;
     font-family: "Roboto Condensed";
     letter-spacing: 0.15em;
     border-radius: 0.4em;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 @media (max-width: 960px) {
@@ -357,11 +366,12 @@ body {
         #top {
             #left {
                 line-height: 0em;
-                height: 9em;
+                height: 8em;
             }
             
             #right {
                 line-height: 0em;
+                min-height: 5em;
             }
         }
         

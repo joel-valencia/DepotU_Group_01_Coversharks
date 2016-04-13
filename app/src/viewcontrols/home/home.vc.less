@@ -8,7 +8,138 @@
     }
 }
 
-#vp #home-hero {
+.dark-bg, .light-bg {
+    line-height: 1.7em;
+}
+
+.dark-bg .left {
+    padding: 0em 1em 0em 8em;
+    
+    h1 {
+        margin-left: -0.9em; 
+    }
+}
+
+.dark-bg .right {
+    padding: 0em 8em 0em 0em;
+}
+
+.dark-bg, .light-bg {
+    h1 {
+        font-family: "Work Sans ExtraBold";
+        text-transform: uppercase;
+        font-size: 3em;
+        letter-spacing: 0.07em;
+        padding: 0.4em 0.7em;
+        margin: 0em;
+        display: inline-block;
+        line-height: 1em;
+        margin-bottom: 0.4em;
+    }
+    
+    .copy {
+        font-size: 0.9em;
+        display: block;
+    }
+    
+    .nav-button {
+        background-color: white;
+        color: #595959;
+        margin-top: 1.6em;
+    }
+}
+
+.dark-bg {
+    color: white;
+    
+    h1 {
+        color: white;
+        background-color: #2897c9;
+    }
+}
+
+#home-hero {
     background-image: url('/images/coversharks-web-hero.jpg');
-    min-height: 500px;
+    background-size: cover;
+    padding-top: 5.65em;
+    
+    .left {
+        min-height: 30em;
+        position: relative;
+        
+        .container {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    
+    .right {
+        margin-top: 4em;
+        min-height: 26em;
+        background-image: url('/images/hero-phone.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        
+        background-size: contain;
+    }
+}
+
+@media (max-width: 700px) {
+    
+    .dark-bg, .light-bg {
+        text-align: center;
+        font-family: "Roboto BoldCondensed";
+        text-transform: uppercase;
+        line-height: 2.2em;
+        
+        span.extended {
+            display: none;
+        }
+    }
+    
+    .dark-bg .left {
+        padding: 1.8em;
+    }
+
+    .dark-bg .right {
+        padding: 1.8em;
+    }
+
+    .dark-bg, .light-bg {
+        h1 {
+            font-size: 2em;
+            letter-spacing: 0.05em;
+            padding: 0.5em 0.6em;
+        }
+        
+        .copy {
+            font-size: 1.2em;
+            display: block;
+        }
+    }
+    
+    .dark-bg .left {
+        h1 {
+            margin-left: 0em; 
+        }
+    }
+    
+    #home-hero {
+        .left {
+            min-height: 0em;
+            
+            .container {
+                position: static;
+                top: 0%;
+                transform: translateY(0%);
+            }
+        }
+        .right {
+            min-height: 15em;
+            margin-top: 0em;
+            background-size: auto 20em;;
+            background-position: center top;
+        }
+    }
 }
