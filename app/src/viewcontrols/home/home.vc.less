@@ -23,6 +23,23 @@
         margin-bottom: 0.4em;
     }
     
+    h2 {
+        font-family: "Work Sans ExtraBold";
+        font-size: 2.5em;
+        letter-spacing: 0.07em;
+        margin: 0em;
+        display: inline-block;
+        line-height: 1em;
+        margin-bottom: 0em;
+    }
+    
+    h4 {
+        font-family: "Roboto BoldCondensed";
+        text-transform: uppercase;
+        font-size: 1.35em;
+        padding-top: 0em;
+    }
+    
     .copy {
         font-size: 0.9em;
         display: block;
@@ -37,6 +54,10 @@
         background-color: #2897c9;
     }
     
+    h2 {
+        color: #2693c6;
+    }
+    
     .nav-button {
         background-color: white;
         color: #595959;
@@ -46,6 +67,14 @@
 
 .light-bg {
     color: black;
+    
+    h2 {
+        color: #35b996;
+    }
+    
+    h4 {
+        color: #a4a8ab;
+    }
     
     .nav-button {
         background-color: #3a3a3c;
@@ -107,26 +136,45 @@
             top: 50%;
             transform: translateY(-50%);
             
-            h4 {
-                    font-family: "Roboto BoldCondensed";
-                    text-transform: uppercase;
-                    font-size: 1.35em;
-                    color: #a4a8ab;
-                    padding-top: 0em;
-                }
-                
             h2 {
-                font-family: "Work Sans ExtraBold";
-                font-size: 2.5em;
-                letter-spacing: 0.07em;
                 padding-right: 1em;
-                margin: 0em;
-                display: inline-block;
-                line-height: 1em;
-                margin-bottom: 0em;
-                color: #35b996;
             }
         }
+    }
+}
+
+#home-how {
+    background-image: url('/images/bkgrnd.svg');
+    background-size: cover;
+    text-align: center;
+    
+    .left {
+        min-height: 35em;
+        position: relative;
+        
+        .container {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding-left: 6em;
+            padding-right: 0em;
+            
+            h2 {
+                padding-top: 0em;
+            }
+            
+            .copy {
+                padding-top: 1em;
+            }
+        }
+    }
+    
+    .right {
+        min-height: 35em;
+        background-image: url('/images/tilted-phone.png');
+        background-size: auto 33em;
+        background-position: left center;
+        background-repeat: no-repeat;
     }
 }
 
@@ -137,14 +185,16 @@
 @media (max-width: 700px) {
     .dark-bg, .light-bg {
         text-align: center;
-        font-family: "Roboto BoldCondensed";
-        text-transform: uppercase;
-        line-height: 2.2em;
         
         h1 {
             font-size: 2em;
             letter-spacing: 0.05em;
             padding: 0.5em 0.6em;
+        }
+        
+        h2 {
+            padding-right: 0em;
+            font-size: 1.6em;
         }
         
         span.extended {
@@ -170,6 +220,9 @@
                     font-size: 1.2em;
                     display: block;
                     padding-right: 0em;
+                    font-family: "Roboto BoldCondensed";
+                    text-transform: uppercase;
+                    line-height: 2.2em;
                 }
             }
         }
@@ -200,19 +253,35 @@
                 top: 0%;
                 transform: translateY(0%);
                 
-                // h4 {
-                //     font-family: "Roboto BoldCondensed";
-                //     text-transform: uppercase;
-                // }
-                
                 h2 {
                     padding-right: 0em;
-                    font-size: 1.6em;
                     line-height: 1.3em;
                     letter-spacing: 0em;
                     text-transform: none;
                 }
             }
+        }
+    }
+    
+    #home-how {
+        .left {
+            min-height: 0em;
+            padding: 1.8em;
+            background-image: none;
+            background-color: #182144;
+            
+            .container {
+                position: static;
+                top: 0%;
+                transform: translateY(0%);
+                padding-left: 0em;
+            }
+        }
+        
+        .right {
+            min-height: 13em;
+            background-image: url('/images/app-image-1-01.png');
+            background-size: cover;
         }
     }
 }
