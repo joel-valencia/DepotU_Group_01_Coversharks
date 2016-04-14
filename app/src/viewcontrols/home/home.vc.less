@@ -31,11 +31,11 @@
         display: inline-block;
         line-height: 1em;
         margin-bottom: 0em;
+        color: #2693c6;
     }
     
     h4 {
         font-family: "Roboto BoldCondensed";
-        text-transform: uppercase;
         font-size: 1.35em;
         padding-top: 0em;
     }
@@ -54,10 +54,6 @@
         background-color: #2897c9;
     }
     
-    h2 {
-        color: #2693c6;
-    }
-    
     .nav-button {
         background-color: white;
         color: #595959;
@@ -67,10 +63,6 @@
 
 .light-bg {
     color: black;
-    
-    h2 {
-        color: #35b996;
-    }
     
     h4 {
         color: #a4a8ab;
@@ -136,7 +128,12 @@
             top: 50%;
             transform: translateY(-50%);
             
+            h4 {
+                text-transform: uppercase;
+            }
+            
             h2 {
+                color: #35b996;
                 padding-right: 1em;
             }
         }
@@ -175,6 +172,46 @@
         background-size: auto 33em;
         background-position: left center;
         background-repeat: no-repeat;
+    }
+}
+
+#home-overview-title {
+    text-align: center;
+    background-color: #f3f3f3;
+    padding-top: 0.7em;
+    padding-bottom: 1.8em;
+    text-transform: uppercase;
+}
+
+#home-overview {
+    text-align: center;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-bottom: 1em;
+    background-color: #f3f3f3;
+    color: #999;
+    
+    .card-container {
+        padding: 0.6em;
+    }
+    
+    .card {
+        background-color: white;
+        border-radius: 1em;
+        border-bottom: 0.15em solid #a8a9ad;
+        border-right: 0.15em solid #a8a9ad;
+        padding: 1.7em 1em;
+        min-height: 24em;
+        
+        img {
+            width: 100%;
+        }
+        
+        h4 {
+            color: #6d6e72;
+            margin-top: 0.6em;
+            margin-bottom: 0.6em;
+        }
     }
 }
 
@@ -277,11 +314,30 @@
                 padding-left: 0em;
             }
         }
+    }
+    
+    #home-overview {
+        padding-left: 0em;
+        padding-right: 0em;
+        padding-bottom: 0em;
         
-        .right {
-            min-height: 13em;
-            background-image: url('/images/app-image-1-01.png');
-            background-size: cover;
+        .card-container {
+            padding: 0em;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 0em;
+            padding: 0em;
+            min-height: 0em;
+            
+            h4 {
+                margin-top: 1em;
+            }
+            
+            .copy {
+                padding: 0em 1.8em 1.8em 1.8em;
+            }
         }
     }
 }
