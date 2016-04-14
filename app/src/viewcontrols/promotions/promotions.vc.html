@@ -11,14 +11,37 @@
         <p id='p-4'>Auburn vs. Alabama A-Day Promotion Free giveaways at on-site promotions</p>
         <button id='butt' plat-tap='toggleModal(modal)'>REGISTER</button>
         <plat-modal plat-options='{transition: "fade"}' plat-bind='modal' class='modal-prompt'>
+            <div style='background-color: #2d86b8'class="prompt-title">Please enter your registration information.</div>
             <div class="prompt-body">
-                <p id='test'>Please enter your registration informationnnnnnnnnnnnnnnnnnnn.</p>
-                <plat-input id='input-1' placeholder='First and Last Name'></plat-input>
-                <plat-input class='input-1' placeholder='Email'></plat-input>
-                <plat-input class='input-2' placeholder='Zip Code'></plat-input>
+                <plat-input style='background-color: white; border-bottom:none; padding-left: 1em; border-radius: 0.6em' placeholder='First and Last Name'></plat-input>
+                <br>
+                <br>
+                <plat-input style='background-color: white; border-bottom: none; padding-left: 1em; border-radius: 0.6em' class='input-1' placeholder='Email'></plat-input>
+                <br>
+                <br>
+                <plat-input style='background-color: white; border-bottom: none; padding-left: 1em; border-radius: 0.6em;'  placeholder='Zip Code'></plat-input>
+                <br>
+                <p>Favorite Team</p>
+                <plat-select style='background-color: white; margin-top: -1em; border: none; border-radius: 0.6em' plat-context="items">
+                    <option>{{text}}</option>
+                </plat-select>
+                <p style='font-size: 0.6em'>Enter the above text feilds and click register to enter the Free Yeti Cooler
+or Apple Watch Promotion. This promotion runs through April 17. You will
+recieve a conformation email after you registration has beed processed.</p>
             </div>
             <div class="prompt-action">
-                <button plat-tap='modalOff()'>close</button>
+                <button style='  background-color: #3a3a3c;
+              color: white;
+              border: none;
+              text-align: center;
+              width: 40%;
+              padding-top: 0.8em;
+              padding-bottom: 0.8em;
+              font-size: 0.9em;
+              border-radius: 0.6em;
+              margin-top: -3em;
+              letter-spacing: 0.2em;
+              font-family: "Roboto Condensed"'plat-tap='modalOff()'>REGISTER</button>
             </div>
         </plat-modal>
    </div>
