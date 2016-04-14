@@ -9,7 +9,18 @@
         <p id='p-2'>FREE YETI COOLER or APPLE WATCH</p>
         <p id='p-3'>Through April 17th</p>
         <p id='p-4'>Auburn vs. Alabama A-Day Promotion Free giveaways at on-site promotions</p>
-        <button id='butt'>REGISTER</button>
+        <button id='butt' plat-tap='toggleModal(modal)'>REGISTER</button>
+        <plat-modal plat-options='{transition: "fade"}' plat-bind='modal' class='modal-prompt'>
+            <div class="prompt-body">
+                <p id='test'>Please enter your registration informationnnnnnnnnnnnnnnnnnnn.</p>
+                <plat-input id='input-1' placeholder='First and Last Name'></plat-input>
+                <plat-input class='input-1' placeholder='Email'></plat-input>
+                <plat-input class='input-2' placeholder='Zip Code'></plat-input>
+            </div>
+            <div class="prompt-action">
+                <button plat-tap='modalOff()'>close</button>
+            </div>
+        </plat-modal>
    </div>
    <img id='yeti-watch' class='col-phb-5' src="../../images/apple-watch-and-yeti-image.png">     
 </div>

@@ -1,16 +1,55 @@
+
+<!--<div class="videos">-->
+
 <div class="row">
     <div id="football">
-    <h1 id="opener">HOW TO PLAY</h1>
+    <h2 id="opener">HOW TO PLAY</h2>
     </div> 
 </div>
-<!--<div class="navspan">
+
+
+<div class="tabsbar">
     <ul>
-        <li><a href="#/howtoplay/gettingstarted">Getting Started</a></li>
-        <li><a href="#/howtoplay/videos">Videos</a></li>
-    </ul>
-</div>-->
-<div class="bigcontainer">
-    <h3>Pick Your Content</h3>
+        <li plat-tap="vidFunc()">videos</li>
+        <li plat-tap="startFunc()">Getting Started</li>
+</ul>
+</div>
+
+<span plat-visible="{{showStarted}}">
+<div class="bigStartedContainer">
+<div class="row">
+    <div class="phonecontainer">
+    <div class="col-dsk-4 col-phn-12 phone"> 
+        <img class="phonepic" src="/images/phone1.png"> 
+    </div>
+    <div class="col-dsk-8 col-phn-12 coming soon">
+        <h3>APP COMING SOON</h3>
+        <h4>Our app is in development, but you can enter your email to be the first to recieve updates
+            about CoverSharks.</h4>
+    </div>
+    <div class="col-dsk-8 col-phn-12"> 
+        <plat-input type="text" placeholder="Email"/>
+        <plat-button class="SUBSCRIBE">SUBSCRIBE</plat-button> 
+    </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-dsk-12 col-phn-12 phone">  
+    </div>
+</div>
+    
+    
+    
+</div>
+</span>
+
+
+
+
+
+<span plat-visible="{{showVideos}}">
+    <div class="bigVidContainer">
+    <h3>Pick Your Contest</h3>
 <div class="row video-row">
     <div class="col-dsk-4 col-phb-6 col-phn-12">
         <div class="container box">
@@ -120,3 +159,6 @@
 
 <!--bigcontainerenddiv -->
 </div>
+</div>
+<!--videos tab div-->
+</span>

@@ -8,7 +8,211 @@
     }
 }
 
-#vp #home-hero {
+.dark-bg, .light-bg {
+    line-height: 1.7em;
+    
+    h1 {
+        font-family: "Work Sans ExtraBold";
+        text-transform: uppercase;
+        font-size: 3em;
+        letter-spacing: 0.07em;
+        padding: 0.4em 0.7em;
+        margin: 0em;
+        display: inline-block;
+        line-height: 1em;
+        margin-bottom: 0.4em;
+    }
+    
+    .copy {
+        font-size: 0.9em;
+        display: block;
+    }
+}
+
+.dark-bg {
+    color: white;
+    
+    h1 {
+        color: white;
+        background-color: #2897c9;
+    }
+    
+    .nav-button {
+        background-color: white;
+        color: #595959;
+        margin-top: 1.6em;
+    }
+}
+
+.light-bg {
+    color: black;
+    
+    .nav-button {
+        background-color: #3a3a3c;
+        color: white;
+        margin-top: 1.6em;
+    }
+}
+
+#home-hero {
     background-image: url('/images/coversharks-web-hero.jpg');
-    min-height: 500px;
+    background-size: cover;
+    padding-top: 5.65em;
+    
+    h1 {
+        margin-left: -0.9em; 
+    }
+    
+    .left {
+        min-height: 30em;
+        padding: 0em 0em 0em 8em;
+        position: relative;
+        
+        .container {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            
+            .copy {
+                padding-right: 2em;
+            }
+        }
+    }
+    
+    .right {
+        min-height: 30em;
+        padding: 0em 8em 0em 0em;
+        background-image: url('/images/hero-phone.png');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: auto 27em;
+    }
+}
+
+#home-register {
+    .left {
+        min-height: 25em;
+        background-image: url('/images/apple-watch-and-yeti-image.png');
+        background-size: auto 20em;
+        background-position: 70% center;
+        background-repeat: no-repeat;
+    }
+    
+    .right {
+        min-height: 25em;
+        position: relative;
+        
+        .container {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            
+            h4 {
+                    font-family: "Roboto BoldCondensed";
+                    text-transform: uppercase;
+                    font-size: 1.35em;
+                    color: #a4a8ab;
+                    padding-top: 0em;
+                }
+                
+            h2 {
+                font-family: "Work Sans ExtraBold";
+                font-size: 2.5em;
+                letter-spacing: 0.07em;
+                padding-right: 1em;
+                margin: 0em;
+                display: inline-block;
+                line-height: 1em;
+                margin-bottom: 0em;
+                color: #35b996;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    
+}
+
+@media (max-width: 700px) {
+    .dark-bg, .light-bg {
+        text-align: center;
+        font-family: "Roboto BoldCondensed";
+        text-transform: uppercase;
+        line-height: 2.2em;
+        
+        h1 {
+            font-size: 2em;
+            letter-spacing: 0.05em;
+            padding: 0.5em 0.6em;
+        }
+        
+        span.extended {
+            display: none;
+        }
+    }
+    
+    #home-hero {
+        .left {
+            min-height: 0em;
+            padding: 1.8em;
+            
+            .container {
+                position: static;
+                top: 0%;
+                transform: translateY(0%);
+                
+                h1 {
+                    margin-left: 0em; 
+                }
+                
+                .copy {
+                    font-size: 1.2em;
+                    display: block;
+                    padding-right: 0em;
+                }
+            }
+        }
+        .right {
+            min-height: 11em;
+            background-size: auto 20em;;
+            background-position: center top;
+            padding: 0em;
+        }
+    }
+    
+    #home-register {
+        .left {
+            min-height: 12.2em;
+            margin-top: 0em;
+            padding: 0em;
+            background-size: auto 13em;
+            background-position: center -1.5em;
+        }
+        
+        .right {
+            min-height: 0em;
+            padding: 1.8em;
+            margin-bottom: 0em;
+            
+            .container {
+                position: static;
+                top: 0%;
+                transform: translateY(0%);
+                
+                // h4 {
+                //     font-family: "Roboto BoldCondensed";
+                //     text-transform: uppercase;
+                // }
+                
+                h2 {
+                    padding-right: 0em;
+                    font-size: 1.6em;
+                    line-height: 1.3em;
+                    letter-spacing: 0em;
+                    text-transform: none;
+                }
+            }
+        }
+    }
 }

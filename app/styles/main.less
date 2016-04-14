@@ -1,5 +1,4 @@
 @import '../../node_modules/platypusui/dist/platypus';
-
 @import '../src/viewcontrols/about/about.vc.less';
 @import '../src/viewcontrols/home/home.vc.less';
 @import '../src/viewcontrols/howtoplay/howtoplay.vc.less';
@@ -50,6 +49,12 @@
 	     url("/fonts/WorkSans-SemiBold.woff") format("woff"),
 	     url("/fonts/WorkSans-SemiBold.ttf") format("truetype");
 }
+
+@nav-height: 5.65em;
+@nav-mobile-height: 4.5em;
+@nav-font-size: 1.2em;
+@footer-text-color: #384d68;
+@hamburger-line-length: 2.2em;
 
 body {
     font-family: "Work Sans Regular";
@@ -113,12 +118,6 @@ body {
     }
 }
 
-@nav-height: 5.65em;
-@nav-mobile-height: 4.5em;
-@nav-font-size: 1.2em;
-@footer-text-color: #384d68;
-@hamburger-line-length: 2.2em;
-
 #nav {
     height: @nav-height;
     padding-left: 2em;
@@ -131,7 +130,6 @@ body {
     #logo {
         display: inline-block;
         line-height: @nav-height;
-        // float: left;
         width: 11.5em;
         height: 2.6em;
         background-image: url('/images/logo-color.svg');
@@ -196,6 +194,11 @@ body {
     font-size: @nav-font-size;
     display: block;
     clear: both;
+    
+    .nav-button {
+        background-color: #35b995;
+        color: white;
+    }
     
     #top {
         background-color: #1c202b;
@@ -268,10 +271,14 @@ body {
         }
         
         #right {
-            // height: 10.2em;
+            min-height: 10.3em;
+            position: relative;
             
             .nav-button {
-
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }
@@ -297,12 +304,11 @@ body {
     width: 11.9em;
     height: 3.1em;
     line-height: 3.1em;
-    vertical-align: middle;
-    background-color: #35b995;
-    color: white;
     font-family: "Roboto Condensed";
     letter-spacing: 0.15em;
     border-radius: 0.4em;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 @media (max-width: 960px) {
@@ -357,11 +363,12 @@ body {
         #top {
             #left {
                 line-height: 0em;
-                height: 9em;
+                height: 8em;
             }
             
             #right {
                 line-height: 0em;
+                min-height: 5em;
             }
         }
         
@@ -399,5 +406,4 @@ body {
             margin-top: 0.8em;
         }
     }
-    
 }
