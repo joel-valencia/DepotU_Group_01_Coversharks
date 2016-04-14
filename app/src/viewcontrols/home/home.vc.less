@@ -112,21 +112,6 @@
 }
 
 @media (max-width: 700px) {
-    .dark-bg {
-        .left {
-            padding: 1.8em;
-            
-            h1 {
-                margin-left: 0em; 
-            }
-        }
-
-        .right {
-            padding: 1.8em;
-        }
-    }
-    
-
     .dark-bg, .light-bg {
         text-align: center;
         font-family: "Roboto BoldCondensed";
@@ -139,12 +124,6 @@
             padding: 0.5em 0.6em;
         }
         
-        .copy {
-            font-size: 1.2em;
-            display: block;
-            padding-right: 0em;
-        }
-        
         span.extended {
             display: none;
         }
@@ -153,11 +132,22 @@
     #home-hero {
         .left {
             min-height: 0em;
+            padding: 1.8em;
             
             .container {
                 position: static;
                 top: 0%;
                 transform: translateY(0%);
+                
+                h1 {
+                    margin-left: 0em; 
+                }
+                
+                .copy {
+                    font-size: 1.2em;
+                    display: block;
+                    padding-right: 0em;
+                }
             }
         }
         .right {
@@ -165,6 +155,34 @@
             margin-top: 0em;
             background-size: auto 20em;;
             background-position: center top;
+            padding: 1.8em;
+        }
+    }
+    
+    #home-register {
+        .left {
+            min-height: 15em;
+            margin-top: 0em;
+            // background-size: auto 20em;;
+            // background-position: center top;
+            padding: 1.8em;
+        }
+        
+        .right {
+            min-height: 0em;
+            padding: 1.8em;
+            
+            .container {
+                position: static;
+                top: 0%;
+                transform: translateY(0%);
+                
+                .copy {
+                    font-size: 1.2em;
+                    display: block;
+                    padding-right: 0em;
+                }
+            }
         }
     }
 }
