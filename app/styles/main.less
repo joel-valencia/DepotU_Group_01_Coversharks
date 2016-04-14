@@ -1,5 +1,4 @@
 @import '../../node_modules/platypusui/dist/platypus';
-
 @import '../src/viewcontrols/about/about.vc.less';
 @import '../src/viewcontrols/home/home.vc.less';
 @import '../src/viewcontrols/howtoplay/howtoplay.vc.less';
@@ -50,6 +49,12 @@
 	     url("/fonts/WorkSans-SemiBold.woff") format("woff"),
 	     url("/fonts/WorkSans-SemiBold.ttf") format("truetype");
 }
+
+@nav-height: 5.65em;
+@nav-mobile-height: 4.5em;
+@nav-font-size: 1.2em;
+@footer-text-color: #384d68;
+@hamburger-line-length: 2.2em;
 
 body {
     font-family: "Work Sans Regular";
@@ -113,12 +118,6 @@ body {
     }
 }
 
-@nav-height: 5.65em;
-@nav-mobile-height: 4.5em;
-@nav-font-size: 1.2em;
-@footer-text-color: #384d68;
-@hamburger-line-length: 2.2em;
-
 #nav {
     height: @nav-height;
     padding-left: 2em;
@@ -131,7 +130,6 @@ body {
     #logo {
         display: inline-block;
         line-height: @nav-height;
-        // float: left;
         width: 11.5em;
         height: 2.6em;
         background-image: url('/images/logo-color.svg');
@@ -282,7 +280,6 @@ body {
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
-
         }
     }
     
@@ -409,5 +406,4 @@ body {
             margin-top: 0.8em;
         }
     }
-    
 }
