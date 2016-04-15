@@ -13,15 +13,15 @@
         <plat-modal plat-options='{transition: "fade"}' plat-bind='modal' class='modal-prompt'>
             <div style='background-color: #2d86b8'class="prompt-title">Please enter your registration information.</div>
             <div class="prompt-body">
-                <plat-input style='background-color: white; border-bottom:none; padding-left: 1em; border-radius: 0.6em' placeholder='First and Last Name'></plat-input>
+                <plat-input style='background-color: white; border-bottom:none; padding-left: 1em; border-radius: 0.6em; width: 90% ' placeholder='First and Last Name'></plat-input>
                 <br>
                 <br>
-                <plat-input style='background-color: white; border-bottom: none; padding-left: 1em; border-radius: 0.6em' class='input-1' placeholder='Email'></plat-input>
+                <plat-input style='background-color: white; border-bottom: none; padding-left: 1em; border-radius: 0.6em; width: 90%' class='input-1' placeholder='Email'></plat-input>
                 <br>
                 <br>
-                <plat-input style='background-color: white; border-bottom: none; padding-left: 1em; border-radius: 0.6em;'  placeholder='Zip Code'></plat-input>
+                <plat-input style='background-color: white; border-bottom: none; padding-left: 1em; border-radius: 0.6em; width: 90%'  placeholder='Zip Code'></plat-input>
                 <br>
-                <p>Favorite Team</p>
+                <br>
                 <plat-select style='background-color: white; margin-top: -1em; border: none; border-radius: 0.6em' plat-context="items">
                     <option>{{text}}</option>
                 </plat-select>
@@ -29,7 +29,7 @@
 or Apple Watch Promotion. This promotion runs through April 17. You will
 recieve a conformation email after you registration has beed processed.</p>
             </div>
-            <div class="prompt-action">
+            <div style='margin-top: -2em' class="prompt-action">
                 <button style='  background-color: #3a3a3c;
               color: white;
               border: none;
@@ -39,7 +39,6 @@ recieve a conformation email after you registration has beed processed.</p>
               padding-bottom: 0.8em;
               font-size: 0.9em;
               border-radius: 0.6em;
-              margin-top: -3em;
               letter-spacing: 0.2em;
               font-family: "Roboto Condensed"'plat-tap='modalOff()'>REGISTER</button>
             </div>
