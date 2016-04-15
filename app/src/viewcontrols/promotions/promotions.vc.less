@@ -51,7 +51,7 @@
               padding-right: 6em;
               margin-top: -0.5em;
           }
-          #butt {
+          #button {
               background-color: #3a3a3c;
               color: white;
               border: none;
@@ -153,6 +153,10 @@
 }
 
 @media (max-width: 900px) {
+    #div-1 #featured {
+        margin-top: -1em !important;
+    }
+    
     #p-4 {
         padding-right: 0em !important;
     }
@@ -161,19 +165,23 @@
         width: 80%;
         margin-left: 10%;
     }
-    #butt {
+    #button {
         margin-top: 10% !important;
     }
     
     #yeti-watch {
         width: 80% !important;
         margin-left: 10% !important;
+        margin-top: -10% !important;
     }
     
 }
 @media (max-width: 700px) {
-    #body #butt {
-        margin-left: 20%;
+    #div-1 #featured {
+        margin-top: 0em !important;
+    }
+    #body #button {
+        margin-left: 0% !important;
         width: 60% !important;
     }
 }
