@@ -34,14 +34,32 @@
         color: #2693c6;
     }
     
+    h3 {
+        font-family: "Roboto BoldCondensed";
+        color: #2693c6;
+        letter-spacing: 0.03em;
+        font-size: 1.45em;
+    }
+    
     h4 {
         font-family: "Roboto BoldCondensed";
         font-size: 1.35em;
         padding-top: 0em;
     }
     
+    input {
+        border: 0.1em solid #959595;
+        border-radius: 0.7em;
+        font-family: "Roboto Condensed";
+        font-size: 1.1em;
+        text-align: center;
+        letter-spacing: 0.07em;
+        padding: 0.5em;
+        box-sizing: content-box;
+    }
+    
     .copy {
-        font-size: 0.9em;
+        font-size: 1em;
         display: block;
     }
 }
@@ -95,7 +113,7 @@
             transform: translateY(-50%);
             
             .copy {
-                padding-right: 2em;
+                padding-right: 1.5em;
             }
         }
     }
@@ -215,6 +233,20 @@
     }
 }
 
+#home-subscribe {
+    text-align: center;
+    background-color: #f3f3f3;
+    padding-bottom: 4em;
+    
+    .input-container {
+        display: block;
+        
+        input {
+            width: 55%;
+        }
+    }
+}
+
 @media (max-width: 800px) {
     
 }
@@ -236,6 +268,12 @@
         
         span.extended {
             display: none;
+        }
+        
+        .nav-button {
+            height: 3em;
+            line-height: 3em;
+            width: 11em;
         }
     }
     
@@ -312,6 +350,10 @@
                 top: 0%;
                 transform: translateY(0%);
                 padding-left: 0em;
+                
+                .nav-button {
+                    width: 13.5em;
+                }
             }
         }
     }
@@ -338,6 +380,30 @@
             .copy {
                 padding: 0em 1.8em 1.8em 1.8em;
             }
+        }
+    }
+    
+    #home-subscribe {
+        padding-left: 1.8em;
+        padding-right: 1.8em;
+        padding-bottom: 2em;
+        
+        h3 {
+            line-height: 1.3em;
+        }
+        
+        .input-container {
+            input {
+                width: 90%;
+                font-size: 1.5em;
+                border-radius: 0.3em;
+                border-color: #ddd;
+                padding: 0.3em;
+            }
+        }
+        
+        .nav-button {
+            width: 13.5em;
         }
     }
 }
