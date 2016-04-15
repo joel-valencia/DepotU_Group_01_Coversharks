@@ -124,7 +124,7 @@
         background-image: url('/images/hero-phone.png');
         background-repeat: no-repeat;
         background-position: center bottom;
-        background-size: auto 27em;
+        background-size: auto 90%;
     }
 }
 
@@ -132,7 +132,7 @@
     .left {
         min-height: 25em;
         background-image: url('/images/apple-watch-and-yeti-image.png');
-        background-size: auto 20em;
+        background-size: 85% auto;
         background-position: 70% center;
         background-repeat: no-repeat;
     }
@@ -187,7 +187,7 @@
     .right {
         min-height: 35em;
         background-image: url('/images/tilted-phone.png');
-        background-size: auto 33em;
+        background-size: auto 95%;
         background-position: left center;
         background-repeat: no-repeat;
     }
@@ -219,7 +219,7 @@
         border-bottom: 0.15em solid #a8a9ad;
         border-right: 0.15em solid #a8a9ad;
         padding: 1.7em 1em;
-        min-height: 24em;
+        min-height: 25em;
         
         img {
             width: 100%;
@@ -247,8 +247,37 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
+    .dark-bg, .light-bg {
+        h1 {
+            font-size: 2.6em;
+        }
+    }
     
+    #home-hero {
+        padding-top: 4.5em;
+        
+        .left {
+            padding-left: 4em;
+            padding-right: 2em;
+        }
+    }
+    
+    #home-how {
+        .left {
+            .container {
+                padding-left: 2em;
+            }
+        }
+        .right {
+            background-size: 95% auto;
+        }
+    }
+    
+    #home-overview {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
 }
 
 @media (max-width: 700px) {
