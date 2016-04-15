@@ -132,7 +132,7 @@
     .left {
         min-height: 25em;
         background-image: url('/images/apple-watch-and-yeti-image.png');
-        background-size: 85% auto;
+        background-size: auto 77%;
         background-position: 70% center;
         background-repeat: no-repeat;
     }
@@ -247,6 +247,28 @@
     }
 }
 
+// absurdly large browser window
+@media (min-width: 1300px) {
+    #home-register {
+        .left {
+            background-position: center center;
+        }
+    }
+    #home-how {
+        .right {
+            background-position: center center;
+        }
+    }
+}
+
+// when the navbar and footer change to mobile mode
+@media (max-width: 960px) {
+    #home-hero {
+        padding-top: 4.5em;
+    }
+}
+
+// some in-between sizes like ipad portrait
 @media (max-width: 850px) {
     .dark-bg, .light-bg {
         h1 {
@@ -255,11 +277,21 @@
     }
     
     #home-hero {
-        padding-top: 4.5em;
-        
         .left {
             padding-left: 4em;
             padding-right: 2em;
+            
+            .container {
+                .copy {
+                    padding-right: 2.6em;
+                }
+            }
+        }
+    }
+    
+    #home-register {
+        .left {
+            background-size: 85% auto;
         }
     }
     
@@ -280,6 +312,7 @@
     }
 }
 
+// grid breaks to mobile mode
 @media (max-width: 700px) {
     .dark-bg, .light-bg {
         text-align: center;
