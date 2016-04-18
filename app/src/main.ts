@@ -1,6 +1,5 @@
 import 'platypus';
 import 'platypusui';
-
 import './app/app';
 
 // open mobile menu
@@ -28,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         // only do this on mobile
         if (document.documentElement.clientWidth <= 960) {
-            if (window.scrollY > 200) {
-                // scrolled past 200px
+            if (window.scrollY > 100) {
+                // scrolled past 100px
                 nav.style.backgroundColor = "white";
                 logo.style.backgroundImage = "url('/images/coversharks-mark-color.svg')";
                 for (var i = 0; i < allBars.length; i++) {
@@ -50,15 +49,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (document.documentElement.clientWidth <= 960) {
             // mobile reset
             
-            if (window.scrollY > 200) {
-                // scroll position past 200px
+            if (window.scrollY > 100) {
+                // scroll position past 100px
                 nav.style.backgroundColor = "white";
                 logo.style.backgroundImage = "url('/images/coversharks-mark-color.svg')";
                 for (var i = 0; i < allBars.length; i++) {
                     (<HTMLElement>allBars[i]).style.borderColor = "#2794c6";
                 }
             } else {
-                // scroll position before 200px
+                // scroll position before 100px
                 nav.style.backgroundColor = "transparent";
                 logo.style.backgroundImage = "url('/images/coversharks-mark-white.svg')";
                 for (var i = 0; i < allBars.length; i++) {

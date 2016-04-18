@@ -10,21 +10,7 @@
 
 .dark-bg, .light-bg {
     line-height: 1.7em;
-}
-
-.dark-bg .left {
-    padding: 0em 1em 0em 8em;
     
-    h1 {
-        margin-left: -0.9em; 
-    }
-}
-
-.dark-bg .right {
-    padding: 0em 8em 0em 0em;
-}
-
-.dark-bg, .light-bg {
     h1 {
         font-family: "Work Sans ExtraBold";
         text-transform: uppercase;
@@ -37,15 +23,44 @@
         margin-bottom: 0.4em;
     }
     
-    .copy {
-        font-size: 0.9em;
-        display: block;
+    h2 {
+        font-family: "Work Sans ExtraBold";
+        font-size: 2.5em;
+        letter-spacing: 0.07em;
+        margin: 0em;
+        display: inline-block;
+        line-height: 1em;
+        margin-bottom: 0em;
+        color: #2693c6;
     }
     
-    .nav-button {
-        background-color: white;
-        color: #595959;
-        margin-top: 1.6em;
+    h3 {
+        font-family: "Roboto BoldCondensed";
+        color: #2693c6;
+        letter-spacing: 0.03em;
+        font-size: 1.45em;
+    }
+    
+    h4 {
+        font-family: "Roboto BoldCondensed";
+        font-size: 1.35em;
+        padding-top: 0em;
+    }
+    
+    input {
+        border: 0.1em solid #959595;
+        border-radius: 0.7em;
+        font-family: "Roboto Condensed";
+        font-size: 1.1em;
+        text-align: center;
+        letter-spacing: 0.07em;
+        padding: 0.5em;
+        box-sizing: content-box;
+    }
+    
+    .copy {
+        font-size: 1em;
+        display: block;
     }
 }
 
@@ -56,6 +71,26 @@
         color: white;
         background-color: #2897c9;
     }
+    
+    .nav-button {
+        background-color: white;
+        color: #595959;
+        margin-top: 1.6em;
+    }
+}
+
+.light-bg {
+    color: black;
+    
+    h4 {
+        color: #a4a8ab;
+    }
+    
+    .nav-button {
+        background-color: #3a3a3c;
+        color: white;
+        margin-top: 1.6em;
+    }
 }
 
 #home-hero {
@@ -63,83 +98,374 @@
     background-size: cover;
     padding-top: 5.65em;
     
+    h1 {
+        margin-left: -0.9em; 
+    }
+    
     .left {
         min-height: 30em;
+        padding: 0em 0em 0em 8em;
         position: relative;
         
         .container {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+            
+            .copy {
+                padding-right: 1.5em;
+            }
         }
     }
     
     .right {
-        margin-top: 4em;
-        min-height: 26em;
+        min-height: 30em;
+        padding: 0em 8em 0em 0em;
         background-image: url('/images/hero-phone.png');
         background-repeat: no-repeat;
-        background-position: center;
-        
-        background-size: contain;
+        background-position: center bottom;
+        background-size: auto 90%;
     }
 }
 
-@media (max-width: 700px) {
+#home-register {
+    .left {
+        min-height: 25em;
+        background-image: url('/images/apple-watch-and-yeti-image.png');
+        background-size: auto 77%;
+        background-position: 70% center;
+        background-repeat: no-repeat;
+    }
     
-    .dark-bg, .light-bg {
-        text-align: center;
-        font-family: "Roboto BoldCondensed";
-        text-transform: uppercase;
-        line-height: 2.2em;
+    .right {
+        min-height: 25em;
+        position: relative;
         
-        span.extended {
-            display: none;
+        .container {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            
+            h4 {
+                text-transform: uppercase;
+            }
+            
+            h2 {
+                color: #35b996;
+                padding-right: 1em;
+            }
+        }
+    }
+}
+
+#home-how {
+    background-image: url('/images/bkgrnd.svg');
+    background-size: cover;
+    text-align: center;
+    
+    .left {
+        min-height: 35em;
+        position: relative;
+        
+        .container {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding-left: 6em;
+            padding-right: 0em;
+            
+            h2 {
+                padding-top: 0em;
+            }
+            
+            .copy {
+                padding-top: 1em;
+            }
         }
     }
     
-    .dark-bg .left {
-        padding: 1.8em;
+    .right {
+        min-height: 35em;
+        background-image: url('/images/tilted-phone.png');
+        background-size: auto 95%;
+        background-position: left center;
+        background-repeat: no-repeat;
     }
+}
 
-    .dark-bg .right {
-        padding: 1.8em;
+#home-overview-title {
+    text-align: center;
+    background-color: #f3f3f3;
+    padding-top: 0.7em;
+    padding-bottom: 1.8em;
+    text-transform: uppercase;
+}
+
+#home-overview {
+    text-align: center;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-bottom: 1em;
+    background-color: #f3f3f3;
+    color: #999;
+    
+    .card-container {
+        padding: 0.6em;
     }
+    
+    .card {
+        background-color: white;
+        border-radius: 1em;
+        border-bottom: 0.15em solid #a8a9ad;
+        border-right: 0.15em solid #a8a9ad;
+        padding: 1.7em 1em;
+        min-height: 25em;
+        
+        img {
+            width: 100%;
+        }
+        
+        h4 {
+            color: #6d6e72;
+            margin-top: 0.6em;
+            margin-bottom: 0.6em;
+        }
+    }
+}
 
+#home-subscribe {
+    text-align: center;
+    background-color: #f3f3f3;
+    padding-bottom: 4em;
+    
+    .input-container {
+        display: block;
+        
+        input {
+            width: 55%;
+        }
+    }
+}
+
+// absurdly large browser window
+@media (min-width: 1300px) {
+    #home-register {
+        .left {
+            background-position: center center;
+        }
+    }
+    #home-how {
+        .right {
+            background-position: center center;
+        }
+    }
+}
+
+// when the navbar and footer change to mobile mode
+@media (max-width: 960px) {
+    #home-hero {
+        padding-top: 4.5em;
+    }
+}
+
+// some in-between sizes like ipad portrait
+@media (max-width: 850px) {
     .dark-bg, .light-bg {
+        h1 {
+            font-size: 2.6em;
+        }
+    }
+    
+    #home-hero {
+        .left {
+            padding-left: 4em;
+            padding-right: 2em;
+            
+            .container {
+                .copy {
+                    padding-right: 2.6em;
+                }
+            }
+        }
+    }
+    
+    #home-register {
+        .left {
+            background-size: 85% auto;
+        }
+    }
+    
+    #home-how {
+        .left {
+            .container {
+                padding-left: 2em;
+            }
+        }
+        .right {
+            background-size: 95% auto;
+        }
+    }
+    
+    #home-overview {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+// grid breaks to mobile mode
+@media (max-width: 700px) {
+    .dark-bg, .light-bg {
+        text-align: center;
+        
         h1 {
             font-size: 2em;
             letter-spacing: 0.05em;
             padding: 0.5em 0.6em;
         }
         
-        .copy {
-            font-size: 1.2em;
-            display: block;
+        h2 {
+            padding-right: 0em;
+            font-size: 1.6em;
         }
-    }
-    
-    .dark-bg .left {
-        h1 {
-            margin-left: 0em; 
+        
+        span.extended {
+            display: none;
+        }
+        
+        .nav-button {
+            height: 3em;
+            line-height: 3em;
+            width: 11em;
         }
     }
     
     #home-hero {
         .left {
             min-height: 0em;
+            padding: 1.8em;
             
             .container {
                 position: static;
                 top: 0%;
                 transform: translateY(0%);
+                
+                h1 {
+                    margin-left: 0em; 
+                }
+                
+                .copy {
+                    font-size: 1.2em;
+                    display: block;
+                    padding-right: 0em;
+                    font-family: "Roboto BoldCondensed";
+                    text-transform: uppercase;
+                    line-height: 2.2em;
+                }
             }
         }
         .right {
-            min-height: 15em;
-            margin-top: 0em;
+            min-height: 11em;
             background-size: auto 20em;;
             background-position: center top;
+            padding: 0em;
+        }
+    }
+    
+    #home-register {
+        .left {
+            min-height: 12.2em;
+            margin-top: 0em;
+            padding: 0em;
+            background-size: auto 13em;
+            background-position: center -1.5em;
+        }
+        
+        .right {
+            min-height: 0em;
+            padding: 1.8em;
+            margin-bottom: 0em;
+            
+            .container {
+                position: static;
+                top: 0%;
+                transform: translateY(0%);
+                
+                h2 {
+                    padding-right: 0em;
+                    line-height: 1.3em;
+                    letter-spacing: 0em;
+                    text-transform: none;
+                }
+            }
+        }
+    }
+    
+    #home-how {
+        .left {
+            min-height: 0em;
+            padding: 1.8em;
+            background-image: none;
+            background-color: #182144;
+            
+            .container {
+                position: static;
+                top: 0%;
+                transform: translateY(0%);
+                padding-left: 0em;
+                
+                .nav-button {
+                    width: 13.5em;
+                }
+            }
+        }
+    }
+    
+    #home-overview {
+        padding-left: 0em;
+        padding-right: 0em;
+        padding-bottom: 0em;
+        
+        .card-container {
+            padding: 0em;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 0em;
+            padding: 0em;
+            min-height: 0em;
+            
+            h4 {
+                margin-top: 1em;
+            }
+            
+            .copy {
+                padding: 0em 1.8em 1.8em 1.8em;
+            }
+        }
+    }
+    
+    #home-subscribe {
+        padding-left: 1.8em;
+        padding-right: 1.8em;
+        padding-bottom: 2em;
+        
+        h3 {
+            line-height: 1.3em;
+        }
+        
+        .input-container {
+            input {
+                width: 90%;
+                font-size: 1.5em;
+                border-radius: 0.3em;
+                border-color: #ddd;
+                padding: 0.3em;
+            }
+        }
+        
+        .nav-button {
+            width: 13.5em;
         }
     }
 }
