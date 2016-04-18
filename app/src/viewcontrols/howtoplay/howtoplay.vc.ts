@@ -20,7 +20,7 @@ export default class HowToPlayViewControl extends BaseViewControl {
            this.context.showStarted=false;
             console.log("videos");
     }
-        // In here, manipulate the true/false values on your context that you have your plat-visibles looking to
+        // In here, manipulate the true/false values on your context that has plat-visibles looking to
 }
 
 register.viewControl('howtoplay-vc', HowToPlayViewControl);
