@@ -10,17 +10,17 @@ export default class HowToPlayViewControl extends BaseViewControl {
     };
     
     startFunc(){
-           this.context.showStarted=true;
+        this.context.showStarted=true;
         this.context.showVideos=false;
         console.log("getting started");
     }
     
     vidFunc(){
-              this.context.showVideos=true; 
+           this.context.showVideos=true; 
            this.context.showStarted=false;
             console.log("videos");
-           }
-        // In here, manipulate the true/false values on your context that you have your plat-visibles looking to
     }
+        // In here, manipulate the true/false values on your context that you have your plat-visibles looking to
+}
 
 register.viewControl('howtoplay-vc', HowToPlayViewControl);

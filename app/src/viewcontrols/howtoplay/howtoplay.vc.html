@@ -3,44 +3,128 @@
 
 <div class="row">
     <div id="football">
-    <h2 id="opener">HOW TO PLAY</h2>
+        <p id="opener">HOW TO PLAY</p>
     </div> 
 </div>
-
-
 <div class="tabsbar">
     <ul>
-        <li plat-tap="vidFunc()">videos</li>
-        <li plat-tap="startFunc()">Getting Started</li>
-</ul>
+        <li plat-tap="vidFunc()"><h4>Videos</h4></li>
+        <li plat-tap="startFunc()"><h4>Getting Started</h4></li>
+    </ul>
 </div>
 
 <span plat-visible="{{showStarted}}">
-<div class="bigStartedContainer">
-<div class="row">
-    <div class="phonecontainer">
-    <div class="col-dsk-4 col-phn-12 phone"> 
-        <img class="phonepic" src="/images/phone1.png"> 
+  <div class="bigStartedContainer">                      
+    <div class="row">
+            <div class="col-dsk-6 col-phn-12 phone"> 
+                <img class="phonepic" src="/images/phone1.png"> 
+            </div>
+            <div class="col-dsk-6 col-phn-12 comingsoon1">
+                <h3 class="hide-on-phb">APP COMING SOON</h3>
+                <h4 class="hide-on-phb">Our app is in development, but you can enter your email to be the first to recieve updates
+                about CoverSharks.</h4>
+                <plat-input class="input" type="text" placeholder="Email"></plat-input>
+                <br>
+                <br>
+                <div class="col-phn-12 off-set-2 subscribe" type="button">SUBSCRIBE
+                </div> 
+            </div>
+        </div>
+        <br>
+    <div class="row">
+            <div class="col-dsk-12 hide-on-phb contestinfo">  
+                <h4 class="contest">Our contests are based on real-time point spreads 
+                    which establish favorites and underdogs</h4>
+                <h4 class="instead">Instead of picking players based on their statistics, 
+                    our contests are based on outcomes of games in real-time. The concept 
+                    behing the game is fun, friendly, and patient pending</h4>
+            </div>
+        </div>
     </div>
-    <div class="col-dsk-8 col-phn-12 coming soon">
-        <h3>APP COMING SOON</h3>
-        <h4>Our app is in development, but you can enter your email to be the first to recieve updates
-            about CoverSharks.</h4>
+    <br>
+    <div class="graycontainer">
+        <div class="row">
+            <div class="col-dsk-12 col-phn-12">
+                <h1 id="green">OVERVIEW OF GAMEPLAY</h1>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-dsk-12 col-phn-12 instructions">           
+                <ul>
+                    <li id=" col-dsk-6 col-phn-12 step1"><div class="blue">1</div></li>
+                    <li id="step">Pick Your Contest</li>
+                </ul>
+                <div class="line-separator"></div>
+                <p>CoverSharks is different because it lets you choose your 
+                    contest and how you want to play. Enter the 
+                    Shark Tank and choose college teams to play against the point 
+                    spread or the total in our weekly games.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-dsk-12 col-phn-12 instructions">
+                <ul>
+                    <li id=" col-dsk-12 step1"><div class="blue">2</div></li>
+                    <li id="step">Choose How You Want To Play</li>
+                </ul>
+                <div class="line-separator"></div>
+                <p>Do you want to compete alongside your favorite teams? 
+                    Do you follow the entire nation or a specific conference or 
+                    region of the country? CoverSharks gives you the 
+                    option to customize your play with our unique format of 
+                    games that suits your personal preferences.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-dsk-6 col-phn-12 mainidea">
+                <h1>Score Points and Win</h1>
+                <p>
+                    Once the game begins, teams and players compete to win points. Woth each win,
+                    you can accumulate points that can be redeemed.
+                </p>
+            </div>
+            <div class="col-dsk-6 hide-on-phb phone2">
+              <img class="phonepic" src="/images/phone2.png"> 
+
+            </div>
+        </div>
+        
+        
+        <div class="row">
+            <div class="col-dsk-12 col-phn-12 instructions">
+                <ul>
+                    <li id=" col-phn-12 step1"><div class="col-phn pull-6 blue">3</div></li>
+                    <li id="step">Play For Free</li>
+                </ul>
+                <div class="line-separator"></div>
+                <p>CoverSharks lets you play for free in any of our games. 
+                    Want to play with more on the line than picking 
+                    the winner? Choose from a variety of games and
+                     choose your competition each and every week of the season.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-dsk-12 col-phn-12 instructions">
+                <ul>
+                    <li id=" col-dsk-12 step1"><div class="blue">4</div></li>
+                    <li id="step">Play with Friends, Family, Rivals & Co-workers</li>
+                </ul>
+                <div class="line-separator"></div>
+                <p>Once you see for yourself how much fun you will have,
+                     play with everyone from friends to enemies for the
+                      ultimate game experience. Play head-to-head, in an open 
+                    league or create your own custom league to see who 
+                    has bragging rights in real time with every game.
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="col-dsk-8 col-phn-12"> 
-        <plat-input type="text" placeholder="Email"/>
-        <plat-button class="SUBSCRIBE">SUBSCRIBE</plat-button> 
-    </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-dsk-12 col-phn-12 phone">  
-    </div>
-</div>
-    
-    
-    
-</div>
+    </span>
 </span>
 
 
