@@ -19,6 +19,15 @@ document.getElementById('close').addEventListener('click', function() {
     document.getElementById('footer').removeAttribute("class");
 });
 
+// close mobile menu after clicking nav link
+document.getElementById('mobile-menu').addEventListener('click', function() {
+    document.getElementById('mobile-menu').style.display = "none";
+    // this is potentially dangerous if there are other classes on these elements
+    document.getElementById('nav').removeAttribute("class");
+    document.getElementById('vp').removeAttribute("class");
+    document.getElementById('footer').removeAttribute("class");
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     var nav = document.getElementById('nav');
     var logo = document.getElementById('logo');
